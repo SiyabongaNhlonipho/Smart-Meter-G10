@@ -3,7 +3,7 @@ import { Bar } from 'react-chartjs-2'
 import { useAppContext } from '../Context/appContext'
 import Wrapper from '../assets/wrappers/DashboardFormPage'
 import Loading from './Loading'
-//import jsPDF from 'jspdf'
+////import jsPDF from 'jspdf'
 
 import { Chart as ChartJS,
         CategoryScale,
@@ -30,7 +30,7 @@ const ElectricityMeterContainer =() =>{
    useEffect(()=>{
             getData()
    }, [])
-/*
+/*/*
    const handleSubmit = (event) => { 
     event.preventDefault()
     
@@ -54,8 +54,11 @@ const ElectricityMeterContainer =() =>{
 }
      <div style={{textAlign: 'center'}}><br/>
           <button onClick={handleSubmit}>Download Pdf File</button>
+                     <div style={{textAlign: 'center'}}><br/>
+          <button onClick={handleSubmit}>Download Pdf File</button>
             
           </div>
+*/          </div>
 */
     var data = {
       labels: Time,
