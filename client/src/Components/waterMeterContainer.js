@@ -3,7 +3,7 @@ import { Bar } from 'react-chartjs-2'
 import { useAppContext } from '../Context/appContext'
 import Wrapper from '../assets/wrappers/DashboardFormPage'
 import Loading from './Loading'
-//import jsPDF from 'jspdf'
+import jsPDF from 'jspdf'
 
 
 import { Chart as ChartJS,
@@ -30,7 +30,7 @@ const WaterMeterContainer = () => {
    useEffect(()=>{
             getData()
    }, [])
-  /*  
+
      const handleSubmit = (event) => { 
     event.preventDefault()
    
@@ -53,12 +53,6 @@ const WaterMeterContainer = () => {
     doc.save('Water Statistics.pdf')
 }
 
-  <div style={{textAlign: 'center'}}><br/>
-          <button onClick={handleSubmit}>Download Pdf File</button>
-            
-          </div>
-
-*/
 
      var data = {
       labels: sec_Time,
@@ -122,7 +116,10 @@ const WaterMeterContainer = () => {
              <h4>Last Updated on: {sec_createdAt[0]} </h4>
             <h4>Last Updated At : {sec_Time[0]}</h4>
           </div>
-        
+          <div style={{textAlign: 'center'}}><br/>
+          <button onClick={handleSubmit}>Download Pdf File</button>
+            
+          </div>
           
       </form>
       </Wrapper>
