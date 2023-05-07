@@ -133,7 +133,7 @@ const Landing = () => {
             </div>
             <div className='footerNav'>
                 <ul>
-                    <li><a href="">Home</a> </li>
+                    <li><a href="">Home Home</a> </li>
                     <li><a href="">News</a> </li>
                     <li><a href="">About</a> </li>
                     <li><a href="">Contact Us</a> </li>
