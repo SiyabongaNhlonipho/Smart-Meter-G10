@@ -89,7 +89,7 @@ const Landing = () => {
                  <div><h5> email : 219000917@stu.ukzn.ac.za</h5></div>
                  <div><h5> Phone Number : 0722 120 639  </h5></div></p>
 
-                 <p> <h4> 4.Sinelile Khozaaa </h4>
+                 <p> <h4> 4.Sinelile Khoza </h4>
                  <div><h5> email : 219095027@stu.ukzn.ac.za</h5></div>
                  <div><h5> Phone Number : 0632 066 552</h5></div></p>
 
