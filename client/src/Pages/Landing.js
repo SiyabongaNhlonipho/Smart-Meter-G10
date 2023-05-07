@@ -89,7 +89,7 @@ const Landing = () => {
                  <div><h5> email : 219000917@stu.ukzn.ac.za</h5></div>
                  <div><h5> Phone Number : 0722 120 639  </h5></div></p>
 
-                 <p> <h4> 4.Sinelile Khoza </h4>
+                 <p> <h4> 4.Sinelile Khozaaa </h4>
                  <div><h5> email : 219095027@stu.ukzn.ac.za</h5></div>
                  <div><h5> Phone Number : 0632 066 552</h5></div></p>
 
@@ -133,7 +133,7 @@ const Landing = () => {
             </div>
             <div className='footerNav'>
                 <ul>
-                    <li><a href="">Home Home</a> </li>
+                    <li><a href="">Home</a> </li>
                     <li><a href="">News</a> </li>
                     <li><a href="">About</a> </li>
                     <li><a href="">Contact Us</a> </li>
