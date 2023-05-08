@@ -3,8 +3,7 @@ import { Bar } from 'react-chartjs-2'
 import { useAppContext } from '../Context/appContext'
 import Wrapper from '../assets/wrappers/DashboardFormPage'
 import Loading from './Loading'
-//import jsPDF from 'jspdf'
-
+import jsPDF from 'jspdf'
 
 import { Chart as ChartJS,
         CategoryScale,
@@ -22,7 +21,6 @@ ChartJS.register(
         Legend 
  )
 
-
 const WaterMeterContainer = () => {
   //Fetching Data
     const {getData,sec_Time,sec_createdAt,water_Flow_Rate_in_litres_per_min,outstanding_Balance_in_Rands,water_Consumption_in_litres,isLoading} = useAppContext()
@@ -31,7 +29,7 @@ const WaterMeterContainer = () => {
             getData()
    }, [])
 
-   /*
+   
      const handleSubmit = (event) => { 
     event.preventDefault()
    
@@ -53,13 +51,6 @@ const WaterMeterContainer = () => {
 
     doc.save('Water Statistics.pdf')
 }
-         <div style={{textAlign: 'center'}}><br/>
-          <button onClick={handleSubmit}>Download Pdf File</button>
-            
-          </div>
-          
-
-*/
      var data = {
       labels: sec_Time,
       datasets: [{
@@ -121,7 +112,14 @@ const WaterMeterContainer = () => {
           <div>
              <h4>Last Updated on: {sec_createdAt[0]} </h4>
             <h4>Last Updated At : {sec_Time[0]}</h4>
+            <h4>Water Flow Rate Value: {water_Flow_Rate_in_litres_per_min[0]}</h4>
+
           </div>
+           <div style={{textAlign: 'center'}}><br/>
+          <button onClick={handleSubmit}>Download Pdf File</button>
+            
+          </div>
+          
       </form>
       </Wrapper>
     

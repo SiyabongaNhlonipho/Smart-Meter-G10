@@ -61,7 +61,7 @@ const post = async (req, res) => {
 
     //store in postman
     res.json(val)
-    //get the date at which data was posted
+    //get the date at which data was posteds
      } catch (err) {
           es.status(404).json({
         status : 'fail',
@@ -151,7 +151,7 @@ const updateData = async (req, res) => {
 
 const DeleteData = async (req, res) => {
       try{
-            const wat = await modell.deleteOne(({ MeterNumber:req.params. MeterNumber}))
+            const wat = await modell.deleteOne(({ MeterNumber:req.params.MeterNumber}))
         
             if (wat.deletedCount==1){
                 res.status(204).json({

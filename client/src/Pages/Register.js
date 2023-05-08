@@ -40,15 +40,13 @@ if (isMember) {
              endPoint: 'login',
              alertText: "Login Successful! Redirecting..."});
 } 
-if (values.email === "adminsihle@gmail.com" && values.password === "secret") {
+else if (values.email === "adminsihle@gmail.com" && values.password === "secret") {
          setTimeout(() => {
         navigate("/admin");
       }, 3000);
 
   
-} 
-
-else {
+} else {
   setupUser({currentUser,
              endPoint: 'register',
              alertText: "User Created! Redirecting..."});

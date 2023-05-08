@@ -10,10 +10,11 @@ import { FaCommentsDollar } from "react-icons/fa";
 const Recharge = () => {
   
   //Fetching Data
-    const {getData,Value,voucher,PostVoucher, isLoading, Balance_in_Rands,outstanding_Balance_in_Rands} = useAppContext()
+    const {getData,DeleteUsedVoucher,Value,voucher,PostVoucher, isLoading, Balance_in_Rands,outstanding_Balance_in_Rands} = useAppContext()
 
    useEffect(()=>{
-            getData()
+            getData();
+            DeleteUsedVoucher();
    }, [])
    
 
@@ -27,7 +28,7 @@ const Recharge = () => {
     setCapture_Water(`${waterMeterBalance}`)
     setCapture_electricity(`${electricityMeterBalance}`)
     //PostVoucher(capture)
-    let voucherr;
+    let voucherr; 
     let x ; let y;
     for (let i =0 ; i< voucher.length; i++){
 
@@ -36,13 +37,14 @@ const Recharge = () => {
                 for (let j =0 ; j< outstanding_Balance_in_Rands.length; j++){
                 x= parseFloat(outstanding_Balance_in_Rands[j]) - parseFloat(Value[i])
                 voucherr ={waterMeterBalance:x,electricityMeterBalance:Balance_in_Rands[j]}
-
+               
                   }
           }
           if (capture_electricity === voucher[i]){
                 for (let j =0 ; j< Balance_in_Rands.length; j++){
                   y =parseFloat(Balance_in_Rands[j]) + parseFloat(Value[i])
-            voucherr ={waterMeterBalance:outstanding_Balance_in_Rands[j],electricityMeterBalance:y}
+                  voucherr ={waterMeterBalance:outstanding_Balance_in_Rands[j],electricityMeterBalance:y}
+                 
 
                  }
            }
@@ -52,13 +54,14 @@ const Recharge = () => {
                 for (let j =0 ; j< outstanding_Balance_in_Rands.length; j++){
                 x= parseFloat(outstanding_Balance_in_Rands[j]) - parseFloat(Value[i])
                 voucherr ={waterMeterBalance:x,electricityMeterBalance:voucher[i]}
+         
                   
               }
 
                for (let j =0 ; j< Balance_in_Rands.length; j++){
                 y =parseFloat(Balance_in_Rands[j]) + parseFloat(Value[i])
                 voucherr ={waterMeterBalance:x,electricityMeterBalance:y}
-           
+               
                   }
                      
            }
